@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Surgere Dashboard Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assests/css/fonts.css">
+        <link rel="stylesheet" href="../assests/css/custom.css">
+    </head>
+
+    <body>
+        <div class="dashboard-div">
+            <div class="header-div row no-gutters">
+                <h1 class="col-3 dashboard-logo-heading">
+                    <strong>
+                        SURGERE
+                    </strong>
+                </h1>
+                <div class="col-9 profile-div">
+                    <img class="profile-img" src="../assests/images/profile_user.jpg" alt="image">
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-3">
+                    <ul class="nav nav-tabs side-bar" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#tab-user-management">
+                                User Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab-report">
+                                Report
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab-company">
+                                Company
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-9">
+                    <div class="tab-content dropdown-tab-content">
+                        <div id="tab-user-management" class="tab-pane active">
+                            <div class="d-flex justify-content-center">
+                                <div class="no-user-div">
+                                    <h2>
+                                        <strong>
+                                            Add a user to get started
+                                        </strong>
+                                    </h2>
+                                    <p class="description-para">
+                                        Create a list of users and track their data
+                                    </p>
+                                    <button class="add-user-btn" data-toggle="modal" data-target="#myAddUserModal">
+                                        Add User
+                                    </button>
+                                    <img class="no-data-image" src="../assests/images/no-data-image.svg" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- The Modal -->
+                        <div class="modal" id="myAddUserModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                        
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">
+                                            <strong>
+                                                Add User
+                                            </strong>
+                                        </h4>
+                                    </div>
+                        
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <div class="d-flex justify-content-between">
+                                            <input class="firstName" type="text">
+                                            <input class="lastName" type="text">
+                                        </div>
+                                        <div onclick="toggleDropdown('myAddUserModal','dropdown-1')" class="dropdown-div dropdown-1">
+                                            <span>
+                                                <strong>
+                                                    Surgere
+                                                </strong>
+                                            </span>
+                                            <i class="fa fa-chevron-down dropdown-icon"></i>
+                                            <ul class="display-none">
+                                                <li id="Surgere" value="Surgere" onclick="dropdownAction('myAddUserModal','dropdown-1',event,'Surgere')">
+                                                    Surgere
+                                                </li>
+                                                <li id="Surgere-1" value="Surgere 1" onclick="dropdownAction('myAddUserModal','dropdown-1',event,'Surgere-1')">
+                                                    Surgere 1
+                                                </li>
+                                                <li id="Surgere-2" value="Surgere 2" onclick="dropdownAction('myAddUserModal','dropdown-1',event,'Surgere-2')">
+                                                    Surgere 2
+                                                </li>
+                                                <li id="Surgere-3" value="Surgere 3" onclick="dropdownAction('myAddUserModal','dropdown-1',event,'Surgere-3')">
+                                                    Surgere 3
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div onclick="toggleDropdown('myAddUserModal','dropdown-2')" class="dropdown-div dropdown-2">
+                                            <span>
+                                                <strong>
+                                                    Surgere
+                                                </strong>
+                                            </span>
+                                            <i class="fa fa-chevron-down dropdown-icon"></i>
+                                            <ul class="display-none">
+                                                <li id="Surgere" value="Surgere" onclick="dropdownAction('myAddUserModal','dropdown-2',event,'Surgere')">
+                                                    Surgere
+                                                </li>
+                                                <li id="Surgere-1" value="Surgere 1" onclick="dropdownAction('myAddUserModal','dropdown-2',event,'Surgere-1')">
+                                                    Surgere 1
+                                                </li>
+                                                <li id="Surgere-2" value="Surgere 2" onclick="dropdownAction('myAddUserModal','dropdown-2',event,'Surgere-2')">
+                                                    Surgere 2
+                                                </li>
+                                                <li id="Surgere-3" value="Surgere 3" onclick="dropdownAction('myAddUserModal','dropdown-2',event,'Surgere-3')">
+                                                    Surgere 3
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <input class="number" type="text">
+
+                                        <input class="email" type="email">
+
+                                        <input class="password" type="password">
+
+                                        <label class="label-container">Send credentials via email
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <button class="update-btn" data-dismiss="modal">
+                                            <strong>
+                                                Update
+                                            </strong>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-report" class="tab-pane">
+                        </div>
+                        <div id="tab-company" class="tab-pane">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-div row no-gutters">
+                <h1 class="col-3 dashboard-logo-heading">
+                    <strong>
+                        SURGERE
+                    </strong>
+                </h1>
+                <ul class="footer-div-list d-flex col-9 align-items-center">
+                    <li>
+                        +1.330.966.3746.
+                    </li>
+                    <li>
+                        5399 Lauby Road
+                    </li>
+                    <li>
+                        Green, Ohio 44720
+                    </li>
+                    <li>
+                        surgereautosphere.com
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="../assests/js/custom.js"></script>
+    </body>
+</html>
