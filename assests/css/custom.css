@@ -98,7 +98,7 @@
     display: block;
     background: #083255;
     border: 0px;
-    height: 100vh;
+    height: calc(100vh - 82px);
 }
 
 .side-bar .nav-link{
