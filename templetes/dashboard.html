@@ -26,7 +26,7 @@
                             </g>
                         </svg>
                 </h1>
-                <div class="col-10 profile-div">
+                <div class="col-10 profile-div d-flex justify-content-end align-items-center">
                     <img class="profile-img" src="../assests/images/profile_user.jpg" alt="image">
                 </div>
             </div>
@@ -137,8 +137,8 @@
                                         </span>
                                     </button>
                                 </div>
-                            </div> -->
-                            <!-- <div class="table-body">
+                            </div>
+                            <div class="table-body">
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -613,19 +613,21 @@
                                             <strong>
                                                 Add User
                                             </strong>
+                                            <div class="bar"></div>
                                         </h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     </div>
                         
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                         <div class="d-flex justify-content-between">
-                                            <input class="firstName" type="text" value="Thomas">
-                                            <input class="lastName" type="text" value="Strain">
+                                            <input class="firstName" type="text" placeholder="First Name">
+                                            <input class="lastName" type="text" placeholder="Last Name">
                                         </div>
                                         <div onclick="toggleDropdown('myAddUserModal','dropdown-1')" class="dropdown-div dropdown-1">
                                             <span>
                                                 <strong>
-                                                    Surgere
+                                                    Company
                                                 </strong>
                                             </span>
                                             <i class="fa fa-chevron-down dropdown-icon"></i>
@@ -648,7 +650,7 @@
                                         <div onclick="toggleDropdown('myAddUserModal','dropdown-2')" class="dropdown-div dropdown-2">
                                             <span>
                                                 <strong>
-                                                    Surgere
+                                                    Reports
                                                 </strong>
                                             </span>
                                             <i class="fa fa-chevron-down dropdown-icon"></i>
@@ -668,12 +670,12 @@
                                             </ul>
                                         </div>
 
-                                        <input class="number" type="text" value="+1 9382294830">
+                                        <input class="number" type="text" placeholder="Phone Number">
 
-                                        <input class="email" type="email" value="Thomas.Strain@surgere.com">
+                                        <input class="email" type="email" placeholder="Email Address">
 
                                         <div class="password-field">
-                                            <input class="password" type="password" value="12345678">
+                                            <input class="password" type="password" placeholder="Password">
                                             <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="12px" viewBox="0 0 18 12" version="1.1">
                                                 <title>Suche</title>
                                                 <desc>Created with Sketch.</desc>
@@ -700,7 +702,7 @@
 
                                         <button class="update-btn" data-dismiss="modal">
                                             <strong>
-                                                Update
+                                                Create
                                             </strong>
                                         </button>
                                     </div>
@@ -1215,7 +1217,9 @@
                                             <strong>
                                                 Add Report
                                             </strong>
+                                            <div class="bar"></div>
                                         </h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     </div>
                         
                                     <!-- Modal body -->
@@ -1223,37 +1227,41 @@
                                         <input type="text" placeholder="Page Title">
                                         <input type="text">
 
-                                        <ul class="d-flex justify-content-between align-items-center">
+                                        <ul class="iFrame-ul d-flex justify-content-between align-items-center">
                                             <li class="iFrame-dimension">
                                                 <strong>
                                                     iFrame Dimension
                                                 </strong>
                                             </li>
-                                            <li class="iFrame-height">
-                                                <strong>
+                                            <li id="height" class="iFrame-height">
+                                                <strong value="Height" class="height-value">
                                                     Height
                                                 </strong>
-                                                <span class="increase">
+                                                <span class="increase d-flex justify-content-center align-items-center"
+                                                    onclick="increase('height')">
                                                     <strong>
                                                         +
                                                     </strong>
                                                 </span>
-                                                <span class="decrease">
+                                                <span class="decrease d-flex justify-content-center align-items-center"
+                                                    onclick="decrease('height')">
                                                     <strong>
                                                         -
                                                     </strong>
                                                 </span>
                                             </li>
-                                            <li class="iFrame-width">
-                                                <strong>
+                                            <li id="width" class="iFrame-width">
+                                                <strong value="Width" class="width-value">
                                                     Width
                                                 </strong>
-                                                <span class="increase">
+                                                <span class="increase d-flex justify-content-center align-items-center"
+                                                    onclick="increase('width')">
                                                     <strong>
                                                         +
                                                     </strong>
                                                 </span>
-                                                <span class="decrease">
+                                                <span class="decrease d-flex justify-content-center align-items-center"
+                                                    onclick="decrease('width')">
                                                     <strong>
                                                         -
                                                     </strong>
@@ -1339,7 +1347,7 @@
                                             Search
                                         </button>
                                     </div>
-                                    <button class="add-report-btn-2 d-flex align-items-center justify-content-around" data-toggle="modal"
+                                    <button class="add-company-btn-2 d-flex align-items-center justify-content-around" data-toggle="modal"
                                         data-target="#myAddCompanyModal">
                                         <img src="../assests/images/add-report.png" alt="image">
                                         <span>
@@ -1791,7 +1799,9 @@
                                             <strong>
                                                 Add Company
                                             </strong>
+                                            <div class="bar"></div>
                                         </h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     </div>
                         
                                     <!-- Modal body -->
