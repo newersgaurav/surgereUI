@@ -37,7 +37,7 @@
 }
 
 .form-desp{
-    font-size: 18px;
+    font-size: 28px;
 }
 
 .login-form label{
@@ -67,10 +67,23 @@
     position: absolute;
     bottom:10px;
     left: 7px;
+    color: #083255;
 }
 
 .password-icon path{
-    fill: #000 !important;
+    fill: #DFE2E6;
+}
+
+.login-form input[type="password"]:focus + .password-icon path{
+    fill: #083255;
+}
+
+.username-icon path{
+    fill: #DFE2E6;
+}
+
+.login-form #username:focus + .username-icon path{
+    fill: #083255;
 }
 
 .eye-icon{
@@ -78,6 +91,10 @@
     position: absolute;
     bottom: 12px;
     right: 7px;
+}
+
+.eye-icon-change path{
+    fill: #083255;
 }
 
 .login-page ::placeholder{
@@ -90,7 +107,35 @@
 
 .login-form button[type="submit"]{
     width: 150px;
+    background: #1153C1;
+    font-size: 12px;
 }
+
+.login-page-img-div{
+    position: relative;
+}
+
+.login-page-img-div:after{
+  content: '';
+  border-bottom: 50vh solid #1153C1;
+  border-right: 50vw solid transparent;
+  width: 0;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.login-page-img-div p{
+    position: absolute;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 30px;
+    bottom: 0px;
+    left: 50px;
+    z-index: 1;
+    width: 240px;
+}
+
 
 /* dashboard css */
 
@@ -98,7 +143,8 @@
     display: block;
     background: #083255;
     border: 0px;
-    height: calc(100vh - 82px);
+    padding-top: 30px;
+    height: calc(100vh - 83px);
 }
 
 .side-bar .nav-link{
@@ -106,6 +152,7 @@
     border-radius: 0px;
     border: 0px;
     font-size: 12px;
+    padding: 15px 20px;
 }
 
 .side-bar .nav-item .active{
@@ -113,13 +160,26 @@
     background: #1153c1;
 }
 
+.side-bar .nav-item .active .user-management-icon path, 
+.side-bar .nav-item .active .company-icon path, 
+.side-bar .nav-item .active .report-icon rect{
+    fill: #fff;
+}
+
 .header-div .dashboard-logo-heading{
     background: #083255;
-    color: #fff;
     font-size: 18px;
-    font-style: italic;
     margin: 0px;
     padding: 10px 0px;
+    text-align: center;
+}
+
+.header-div .dashboard-logo-heading .logo-image path{
+    fill: #fff;
+}
+
+.logo-image{
+    width: 60%;
 }
 
 .profile-div{
@@ -130,15 +190,22 @@
 .profile-img{
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 40px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
 }
 
+.no-user-container{
+    height: calc(100vh - 83px);
+}
+
 .no-user-div{
     text-align: center;
-    margin-top: 100px;
+}
+
+.user-management-icon,.company-icon,.report-icon{
+    margin-right: 20px;
 }
 
 .no-user-div h2{
@@ -159,7 +226,7 @@
 }
 
 .no-data-image{
-    width: 50%;
+    width: 70%;
     margin-top: 20px;
 }
 
@@ -172,7 +239,7 @@
     color: #b6b6b6;
 }
 
-.firstName , .lastName{
+#myAddUserModal .firstName , #myAddUserModal .lastName{
     flex-basis: 45%;
 }
 
@@ -249,17 +316,20 @@
     font-weight: bold;
 }
 
-#myAddUserModal .modal-body input:focus{
+#myAddUserModal .modal-body input:focus, #myAddCompanyModal .modal-body input:focus,
+#myAddReportModal .modal-body input:focus{
     border-color: #8199ad;
     outline: none;
 }
 
-#myAddUserModal .modal-dialog{
+#myAddUserModal .modal-dialog, #myAddCompanyModal .modal-dialog,
+#myAddReportModal .modal-dialog{
     width: 30%;
     max-width: 100%;
 }
 
-#myAddUserModal .modal-title{
+#myAddUserModal .modal-title, #myAddCompanyModal .modal-title,
+#myAddReportModal .modal-title{
     color: #083255;
     border-left: 5px solid #1153c1;
     border-top: 5px solid #fff;
@@ -267,9 +337,81 @@
     padding-left: 20px;
 }
 
-#myAddUserModal .modal-header{
+#myAddUserModal .modal-header, #myAddCompanyModal .modal-header,
+#myAddReportModal .modal-header{
     padding-left: 0px;
     border: 0px;
+}
+
+#myAddCompanyModal input, #myAddReportModal input{
+    width: 100%;
+    border: 2px solid #f2f4f6;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #89a0b3;
+    font-weight: bold;
+}
+
+#myAddCompanyModal.show, #myAddUserModal.show, #myAddReportModal.show{
+    display: flex !important;
+}
+
+#myAddCompanyModal input::placeholder{
+    color: #c2cdd6;
+}
+
+#myAddReportModal input::placeholder{
+    color: #8199ad;
+}
+
+#myAddReportModal ul{
+    list-style-type: none;
+}
+
+#myAddReportModal ul li{
+    padding: 10px;
+    font-size: 12px;
+    color: #a5b5c2;
+    border: 2px solid #eaeef1;
+    border-radius: 4px;
+}
+
+.iFrame-dimension{
+    background: #eaeef1;
+    flex-basis: 36%;
+    text-align: center;
+}
+
+.iFrame-height{
+    flex-basis: 27%;
+    position: relative;
+}
+
+.iFrame-width{
+    flex-basis: 27%;
+    position: relative;
+}
+
+.iFrame-height span, .iFrame-width span{
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    text-align: center;
+    background: #e6ebee;
+}
+
+.iFrame-height .increase, .iFrame-width .increase{
+    top: -2px;
+    right: 0px;
+    border-top-right-radius: 4px;
+}
+
+.iFrame-height .decrease, .iFrame-width .decrease{
+    bottom: -2px;
+    right: 0px;
+    border-bottom-right-radius: 4px;
 }
 
 .number,.email , .password{
@@ -280,6 +422,15 @@
     color: #083255 !important;
 }
 
+.password-field{
+    position: relative;
+}
+
+.password-field .eye-icon{
+    bottom: 35px;
+    right: 10px;
+}
+
 .update-btn{
     background: #1153c1;
     color: #fff;
@@ -288,19 +439,243 @@
     width: 100%;
     border: none;
     border-radius: 4px;
+    font-size: 12px;
 }
 
 .update-btn:focus{
     outline: none;
 }
 
+
+
+.search-div{
+    position: relative;
+    width: 70%;
+}
+
+.search-div input{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+    border: 2px solid #e6edf1;
+    border-radius: 4px;
+}
+
+.search-div input:focus{
+    outline: none;
+}
+
+.search-div ::placeholder{
+    font-size: 14px;
+    color: #b4c1cc;
+}
+
+.search-div img{
+    position: absolute;
+    top: 8px;
+    left: 10px;
+}
+
+.search-div button{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px 40px;
+    font-size: 12px;
+    background: #083255;
+    border: none;
+    color: #9cadbb;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.add-user-btn-2{
+    width: 20%;
+    border: none;
+    background: #1153c1;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.add-report-btn-2{
+    width: 25%;
+    border: none;
+    background: #1153c1;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.table-head{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    padding-left: 20px;
+}
+
+.table-body{
+    padding-bottom: 20px;
+    padding-right: 40px;
+    padding-left: 20px;
+}
+
+.table-head h2{
+    margin: 0px;
+    position: relative;
+}
+
+.table-head h2 strong{
+    font-size: 18px;
+    position: absolute;
+    bottom: 0px;
+    color: #083255;
+}
+
+.table-body .table thead th{
+    font-size: 12px;
+    color: #fff;
+    border-bottom: 0px;
+}
+
+.table-body tbody{
+    display: block;
+    height: calc(100vh - 283px);
+}
+
+.table-body tbody::-webkit-scrollbar{
+    display: none;
+}
+
+.table-body .firstName{
+    width: 25%;
+    padding-left: 30px;
+}
+
+.table-body .lastName{
+    width: 25%;
+}
+
+.table-body .company{
+    width: 20%;
+}
+
+.table-body .createdOn{
+    width: 20%;
+}
+
+.table-body .action{
+    width: 10%;
+}
+
+.table-body .pageTitle{
+    width: 30%;
+    padding-left: 30px;
+}
+
+.table-body .company-report{
+    width: 30%;
+}
+
+.table-body .createdOn-report{
+    width: 30%;
+}
+
+.table-body .companyName{
+    width: 45%;
+    padding-left: 30px;
+}
+
+.table-body .createdOn-company{
+    width: 45%;
+}
+
+.delete-icon{
+    margin-right: 10px;
+}
+
+.table-body thead{
+    background: #7badd3;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table-body td{
+    font-size: 12px;
+    color: #083255;
+    font-weight: bold;
+    border: none;
+}
+
+.table-body tbody tr{
+    border: none;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table-body tbody tr:nth-child(even){
+    background: #f4f7f9;
+}
+
+.pagination-div{
+    padding-left: 20px;
+    padding-right: 40px;
+    margin-bottom: 10px;
+}
+
+.count-span{
+    color: #fff;
+    background: #1153c1;
+    font-size: 12px;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.total-pages-span{
+    font-size: 12px;
+    color: #ccd3dd;
+    margin-left: 5px;
+}
+
+.page-control-button button{
+    font-size: 12px;
+    border: none;
+    background: transparent;
+    color: #1153C1;
+}
+
+.previous-page{
+    margin-right: 5px;
+}
+
+.next-page{
+    margin-left: 5px;
+}
+
+.previous-page:disabled,.next-page:disabled{
+    color: #ccd3dd;
+}
+
+.next-page:focus,.previous-page:focus{
+    outline: none;
+}
+
+
+/* footer css */
+
 .footer-div .dashboard-logo-heading{
     background: #eff8ff;
-    color: #083255;
     font-size: 18px;
-    font-style: italic;
     margin: 0px;
     padding: 10px 0px;
+    text-align: center;
 }
 
 .footer-div-list{
@@ -308,6 +683,7 @@
     color: #083255;
     list-style-type: none;
     padding: 10px;
+    padding-right: 30px !important;
     margin: 0px;
     justify-content: flex-end;
 }
@@ -337,19 +713,19 @@
     -ms-user-select: none;
     user-select: none;
     color: #cbd4dc;
-  }
-  
-  /* Hide the browser's default checkbox */
-  .label-container input {
+}
+
+/* Hide the browser's default checkbox */
+.label-container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-  }
-  
-  /* Create a custom checkbox */
-  .label-container .checkmark {
+}
+
+/* Create a custom checkbox */
+.label-container .checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -358,32 +734,32 @@
     background-color: #fff;
     border: 2px solid #e6eaee;
     border-radius: 4px;
-  }
-  
-  /* When the checkbox is checked, add a blue background */
-  .label-container input:checked ~ .checkmark {
+}
+
+/* When the checkbox is checked, add a blue background */
+.label-container input:checked ~ .checkmark {
     background-color: #1153c1;
     border: 2px solid #1153c1;
-  }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .label-container .checkmark:after {
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.label-container .checkmark:after {
     content: "";
     position: absolute;
     display: none;
-  }
+}
 
-  .desktop-view-value .label-container .checkmark{
-      top: -4px;
-  }
-  
-  /* Show the checkmark when checked */
-  .label-container input:checked ~ .checkmark:after {
+.desktop-view-value .label-container .checkmark{
+    top: -4px;
+}
+
+/* Show the checkmark when checked */
+.label-container input:checked ~ .checkmark:after {
     display: block;
-  }
-  
-  /* Style the checkmark/indicator */
-  .label-container .checkmark:after {
+}
+
+/* Style the checkmark/indicator */
+.label-container .checkmark:after {
     left: 3px;
     top: 0px;
     width: 8px;
@@ -393,6 +769,70 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-  }
+}
+
+
+/* Create a custom radio button */
+
+.radio-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #a5b5c2;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+/* Hide the browser's default radio button */
+.radio-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.radio-label .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: 1px solid #b8c3cc;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-label:hover input ~ .checkmark {
+    background-color: #fff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-label .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-label .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #48545f;
+}
 
 

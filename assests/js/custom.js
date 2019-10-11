@@ -11,3 +11,23 @@ function dropdownAction(id1 , id2 , event , ele_id){
     $('#' + id1 + ' .' + id2 + ' span strong').html(val);
     $('#' + id1 + ' .' + id2 + ' .dropdown-icon').removeClass('rotate');
 }
+
+$(".login-form .eye-icon").click(function (){
+    $(".login-form .eye-icon").toggleClass("eye-icon-change");
+    if($(".login-form .pwd-input").attr("type")==="password"){
+        $(".login-form .pwd-input").attr("type","text");
+    }
+    else{
+        $(".login-form .pwd-input").attr("type","password");
+    }
+})
+
+$(".password-field .eye-icon").click(function (){
+    $(".password-field .eye-icon").toggleClass("eye-icon-change");
+    if($(".password-field input").attr("type")==="password"){
+        $(".password-field input").attr("type","text");
+    }
+    else{
+        $(".password-field input").attr("type","password");
+    }
+})
