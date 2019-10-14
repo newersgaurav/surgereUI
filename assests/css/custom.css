@@ -43,6 +43,7 @@ button:focus{
 .form-desp{
     font-size: 28px;
     color: #083255;
+    margin-bottom: 30px;
 }
 
 .login-form label{
@@ -56,8 +57,9 @@ button:focus{
 }
 
 .login-form .form-group input{
-    padding-left: 30px;
+    padding-left: 40px;
     padding-right: 30px;
+    color: #083255;
 }
 
 .username-icon{
@@ -104,6 +106,7 @@ button:focus{
 
 .login-page ::placeholder{
     font-size: 14px;
+    color: #C6C6C6;
 }
 
 .admin-span{
@@ -127,7 +130,7 @@ button:focus{
 
 .login-page-img-div:after{
   content: '';
-  border-bottom: 60vh solid #1153C1;
+  border-bottom: 54vh solid #1153C1;
   border-right: 50vw solid transparent;
   width: 0;
   position: absolute;
@@ -139,11 +142,11 @@ button:focus{
     position: absolute;
     color: #fff;
     font-weight: bolder;
-    font-size: 30px;
-    bottom: 10%;
-    left: 50px;
+    font-size: 2.69vw;
+    bottom: 5.96vh;
+    left: 3.66vw;
     z-index: 1;
-    width: 240px;
+    width: 22.56vw;
 }
 
 
@@ -217,7 +220,7 @@ button:focus{
 }
 
 .no-user-div h2{
-    font-size: 28px;
+    font-size: 2.05vw;
     color: #003057;
     margin: 0px;
 }
@@ -245,20 +248,22 @@ button:focus{
 }
 
 .description-para{
-    font-size: 14px;
+    font-size: 1.02vw;
     color: #b6b6b6;
 }
 
 #myAddUserModal .firstName , #myAddUserModal .lastName{
-    flex-basis: 45%;
+    flex-basis: 47%;
 }
 
 .modal-content{
     border: 0px;
 }
 
-#myAddUserModal .modal-body{
-    padding: 20px;
+#myAddUserModal .modal-body,
+#myAddReportModal .modal-body,
+#myAddCompanyModal .modal-body{
+    padding: 20px 25px;
 }
 
 .dropdown-div{
@@ -306,7 +311,7 @@ button:focus{
 
 .dropdown-icon{
     position: absolute;
-    top: 14px;
+    top: 18px;
     right: 14px;
     color: #89a0b3;
     transition: all 0.5s ease-in;
@@ -353,6 +358,7 @@ button:focus{
 #myAddReportModal .modal-header{
     padding-left: 0px;
     border: 0px;
+    padding-top: 32px;
 }
 
 #myAddCompanyModal input, #myAddReportModal input{
@@ -416,12 +422,14 @@ button:focus{
     top: -2px;
     right: 0px;
     border-top-right-radius: 4px;
+    font-size: 8px;
 }
 
 .iFrame-height .decrease, .iFrame-width .decrease{
     bottom: -2px;
     right: 0px;
     border-bottom-right-radius: 4px;
+    font-size: 8px;
 }
 
 .increase:hover, .decrease:hover{
@@ -484,6 +492,7 @@ button:focus{
     padding-left: 50px;
     border: 2px solid #e6edf1;
     border-radius: 4px;
+    color: #083255;
 }
 
 .search-div input:focus{
@@ -495,9 +504,9 @@ button:focus{
     color: #b4c1cc;
 }
 
-.search-div img{
+.search-div svg{
     position: absolute;
-    top: 13px;
+    top: 15px;
     left: 10px;
 }
 
@@ -523,6 +532,7 @@ button:focus{
     text-align: center;
     border-radius: 4px;
     font-size: 12px;
+    margin-left: 25px;
 }
 
 .add-company-btn-2{
@@ -566,7 +576,7 @@ button:focus{
 
 .table-body tbody{
     display: block;
-    height: calc(100vh - 304px);
+    height: calc(100vh - 314px);
 }
 
 .table-body tbody::-webkit-scrollbar{
@@ -648,7 +658,7 @@ button:focus{
 .pagination-div{
     padding-left: 20px;
     padding-right: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .count-span{
