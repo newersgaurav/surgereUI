@@ -10,6 +10,7 @@ function dropdownAction(id1 , id2 , event , ele_id){
     console.log($('#' + id1 + ' .' + id2 + ' ul #' + ele_id));
     $('#' + id1 + ' .' + id2 + ' span strong').html(val);
     $('#' + id1 + ' .' + id2 + ' .dropdown-icon').removeClass('rotate');
+    $('.' + id2).css("color","#083255");
 }
 
 $(".login-form .eye-icon").click(function (){
@@ -66,3 +67,7 @@ function decrease(id){
     $('#' + id + ' .' + id + '-value').attr("value", count);
     $('#' + id + ' .' + id + '-value').html(count);
 }
+
+$('.profile-img').click(function() {
+    $('.profile-action-menu').toggleClass("display-none");
+})
