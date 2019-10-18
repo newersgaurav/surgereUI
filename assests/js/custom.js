@@ -33,28 +33,35 @@ $(".password-field .eye-icon").click(function (){
     }
 })
 
-function increase(id){
-    console.log("Entry 1");
+$('.height-value').change(function(event){
+    console.log("entry");
+    var val = event.target.value;
+    $('.height-value').attr("value",val);
+    console.log(val);
+    console.log($('.height-value').attr("value"));
+})
+
+function increase(id,event){
+    console.log("entry");
     var count;
     var val = $('#' + id + ' .' + id + '-value').attr("value");
     console.log(val);
-    if( val === "Height" || val === "Width"){
+    if( val === "" || val === "0"){
         count = 0;
-        console.log("Entry 2");
     }
     else{
         count = val;
-        console.log("Entry 2");
     }
     count = parseInt(count) + 1;
-    $('#' + id + ' .' + id + '-value').attr("value", count);
-    $('#' + id + ' .' + id + '-value').html(count);
+    console.log(count);
+    $('#' + id + ' .' + id + '-value').attr("value",count);
+    console.log($('#' + id + ' .' + id + '-value').attr("value"));
 }
 
 function decrease(id){
     var count;
     var val = $('#' + id + ' .' + id + '-value').attr("value");
-    if( val === "Height" || val === "Width"){
+    if( val === "" || val === "0"){
         count = 0;
     }
     else{
@@ -65,7 +72,6 @@ function decrease(id){
         count = 0;
     }
     $('#' + id + ' .' + id + '-value').attr("value", count);
-    $('#' + id + ' .' + id + '-value').html(count);
 }
 
 $('.profile-img').click(function() {
