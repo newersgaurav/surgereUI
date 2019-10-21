@@ -31,48 +31,75 @@ $(".password-field .eye-icon").click(function (){
     else{
         $(".password-field input").attr("type","password");
     }
-})
+});
 
-$('.height-value').change(function(event){
-    console.log("entry");
-    var val = event.target.value;
-    $('.height-value').attr("value",val);
-    console.log(val);
-    console.log($('.height-value').attr("value"));
-})
+$('.iFrame-height').each(function(){
+    var spinner = $(this);
+    var input = spinner.find('input[type="number"]');
+    var btnUp = spinner.find('.increase');
+    var btnDown = spinner.find('.decrease');
+    var min = 0;
 
-function increase(id,event){
-    console.log("entry");
-    var count;
-    var val = $('#' + id + ' .' + id + '-value').attr("value");
-    console.log(val);
-    if( val === "" || val === "0"){
-        count = 0;
-    }
-    else{
-        count = val;
-    }
-    count = parseInt(count) + 1;
-    console.log(count);
-    $('#' + id + ' .' + id + '-value').attr("value",count);
-    console.log($('#' + id + ' .' + id + '-value').attr("value"));
-}
+    btnUp.click(function() {
+        if(input.val() === ""){
+            var oldValue = min;
+        }else{
+            var oldValue = parseInt(input.val());    
+        }
+        var newVal = oldValue + 1;
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
 
-function decrease(id){
-    var count;
-    var val = $('#' + id + ' .' + id + '-value').attr("value");
-    if( val === "" || val === "0"){
-        count = 0;
-    }
-    else{
-        count = val;
-    }
-    count = parseInt(count) - 1;
-    if(count < 0){
-        count = 0;
-    }
-    $('#' + id + ' .' + id + '-value').attr("value", count);
-}
+      btnDown.click(function() {
+        if(input.val() === ""){
+            var oldValue = min;
+        }else{
+            var oldValue = parseInt(input.val());    
+        }
+        if (oldValue === min) {
+          var newVal = min;
+        } else {
+          var newVal = oldValue - 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+});
+
+$('.iFrame-width').each(function(){
+    var spinner = $(this);
+    var input = spinner.find('input[type="number"]');
+    var btnUp = spinner.find('.increase');
+    var btnDown = spinner.find('.decrease');
+    var min = 0;
+
+    btnUp.click(function() {
+        if(input.val() === ""){
+            var oldValue = min;
+        }else{
+            var oldValue = parseInt(input.val());    
+        }
+        var newVal = oldValue + 1;
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+
+      btnDown.click(function() {
+        if(input.val() === ""){
+            var oldValue = min;
+        }else{
+            var oldValue = parseInt(input.val());    
+        }
+        if (oldValue === min) {
+          var newVal = min;
+        } else {
+          var newVal = oldValue - 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+});
 
 $('.profile-img').click(function() {
     $('.profile-action-menu').toggleClass("display-none");
