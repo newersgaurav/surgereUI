@@ -9,6 +9,12 @@ button:focus{
     outline: none;
 }
 
+ul{
+    list-style-type: none;
+    margin: 0px;
+}
+
+
 /* login page css */
 
 .login-page{
@@ -193,7 +199,7 @@ button:focus{
 }
 
 .logo-image{
-    width: 50%;
+    width: 65%;
 }
 
 .profile-div{
@@ -680,7 +686,7 @@ button:focus{
 }
 
 .table-body .action{
-    width: 10%;
+    width: 15%;
 }
 
 .table-body .pageTitle{
@@ -957,4 +963,306 @@ input[type=number]::-webkit-outer-spin-button
 }
 
 
+#status-dropdown .dropdown-div{
+    width: 200px;
+    background: #7badd3;
+    color: #fff;
+    border: none;
+}
 
+#status-dropdown .dropdown-div ul{
+    color: #1153C1;
+    font-weight: 800;
+}
+
+#status-dropdown .dropdown-div ul li{
+    border-bottom: 1px solid #C6C6C6;
+}
+
+#status-dropdown .dropdown-div ul li:last-child{
+    border-bottom: none;
+}
+
+#status-dropdown .dropdown-div .dropdown-icon path{
+    fill: #fff;
+}
+
+.approve{
+    color: green;
+    border-bottom: 1px solid green;
+}
+
+.reject{
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+.approve:hover{
+    cursor: pointer;
+    color: green;
+    border-bottom: 1px solid green;
+    text-decoration: none;
+}
+
+.reject:hover{
+    cursor: pointer;
+    color: red;
+    border-bottom: 1px solid red;
+    text-decoration: none;
+}
+
+.approve-li{
+    padding-right: 5px;
+    border-right: 1px solid #d3d3d3;
+}
+
+.reject-li{
+    padding-left: 5px;
+}
+
+
+#myDeleteModal .modal-dialog{
+    width: 600px;
+    max-width: 100%;
+}
+
+#myDeleteModal .modal-body{
+    padding: 0px 100px;
+    padding-top: 16px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+#myDeleteModal .modal-body p{
+    margin-bottom: 40px;
+    color: #083255;
+}
+
+#myDeleteModal .modal-body button{
+    color: #fff;
+    text-align: center;
+    padding: 15px 0px;
+    width: 130px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+#myDeleteModal .modal-body .yes-btn{
+    background: #1153c1;
+    margin-right: 10px;
+}
+
+#myDeleteModal .modal-body .cancel-btn{
+    background: #C6C6C6;
+    margin-left: 10px;
+}
+
+#myDeleteModal .modal-header{
+    border: none;
+}
+
+#myDeleteModal.show{
+    display: flex !important;
+}
+
+/* user end dashboard */
+
+
+.sidebar-toggle-icon{
+    margin-right: 25px;
+}
+
+.sidebar-toggle-icon:hover{
+    cursor: pointer;
+}
+
+.userend-dashboard-div .dashboard-logo-heading{
+    padding: 15px 25px;
+    flex-basis: 16%;
+    border-left: 2px solid transparent;
+}
+
+.userend-dashboard-div .profile-div{
+    flex-basis: 84%;
+}
+
+.flex-4{
+    flex-basis: 4% !important;
+}
+
+.flex-96{
+    flex-basis: 96% !important;
+}
+
+.margin-right-0{
+    margin-right: 0px;
+}
+
+.userend-dashboard-div .sidebar-menu{
+    flex-basis: 16%;
+}
+
+.userend-dashboard-div .menu-content{
+    flex-basis: 84%;
+}
+
+.userend-dashboard-div .side-bar .nav-link{
+    padding: 10px 10px;
+    border-left: 2px solid transparent;
+    position: relative;
+}
+
+.userend-dashboard-div .flex-4 .side-bar .nav-link{
+    padding: 10px 25px;
+}
+
+.userend-dashboard-div .flex-4 .side-bar .nav-item .active{
+    border-left: 2px solid #7badd3;
+}
+
+.userend-dashboard-div .side-bar .nav-item{
+    padding-left: 20px;
+}
+
+.userend-dashboard-div .flex-4 .side-bar .nav-item{
+    padding-left: 0px;
+}
+
+.userend-dashboard-div .footer-div-list{
+    flex-basis: 84%;
+}
+
+.down-arrow-dropdown{
+    position: absolute;
+    top: 16px;
+    right: 20px;
+}
+
+.dropdown-color{
+    background-color: rgba(17, 83, 193, 0.2) !important;
+    color: #fff !important;
+}
+
+.dropdown-color svg path{
+    fill: #fff;
+}
+
+.dropdown-listing-color{
+    background-color: rgba(17, 83, 193, 0.2);
+}
+
+.sidebar-menu .nav-item ul{
+    width: 100%;
+    top: 38px;
+    left: -2px;
+    background: #083255;
+    max-height: 600px;
+    overflow: scroll;
+}
+
+.sidebar-menu .nav-item ul::-webkit-scrollbar{
+    display: none;
+}
+
+.sidebar-menu .nav-item ul li{
+    color: #7badd3;
+    border-left: 2px solid transparent;
+}
+
+.sidebar-menu .nav-item ul li:hover{
+    background: #1153C1;
+    color: #fff;
+    border-left: 2px solid #7badd3;
+    cursor: pointer;
+}
+
+.search-li{
+    border: none !important;
+    position: relative;
+}
+
+.search-li input{
+    padding: 7px 10px;
+    padding-left: 25px;
+    background: #7badd3;
+    color: #fff;
+    border: none !important;
+    width: 100%;
+    font-size: 12px;
+}
+
+.search-li input::placeholder{
+    color: #fff !important;
+    font-size: 12px;
+}
+
+.search-icon-dropdown{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+.search-icon-dropdown path{
+    fill: #fff;
+}
+
+.dropdown-listing{
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.dropdown-listing:hover{
+    background: #1153c1;
+}
+
+#myAddUserModal .modal-body input:focus::-webkit-input-placeholder, 
+#myAddCompanyModal .modal-body input:focus::-webkit-input-placeholder,
+#myAddReportModal .modal-body input:focus::-webkit-input-placeholder{
+    color: #8199ad;
+}
+
+.br-tlc{
+    border-top-left-radius: 4px !important;
+}
+
+.br-blc{
+    border-bottom-left-radius: 4px !important;
+}
+
+.br-trc{
+    border-top-right-radius: 4px !important;
+}
+
+.br-brc{
+    border-bottom-right-radius: 4px !important;
+}
+
+.request-access{
+    position: relative;
+    color: #3a5380 !important;
+}
+
+.request-access .dots-icon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.request-access:hover{
+    background: rgba(17, 83, 193, 0.2) !important;
+}
+
+.access-request-option{
+    position: absolute;
+    background: #fff;
+    opacity: 0.2;
+    padding: 10px;
+    top: 10px;
+    right: -50px;
+}
+
+.userend-dashboard-div .side-bar{
+    height: calc(100vh - 96px);
+}
