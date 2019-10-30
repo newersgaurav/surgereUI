@@ -1079,12 +1079,12 @@ input[type=number]::-webkit-outer-spin-button
 
 .userend-dashboard-div .dashboard-logo-heading{
     padding: 15px 25px;
-    flex-basis: 16%;
+    flex-basis: 17%;
     border-left: 2px solid transparent;
 }
 
 .userend-dashboard-div .profile-div{
-    flex-basis: 84%;
+    flex-basis: 83%;
 }
 
 .flex-4{
@@ -1100,15 +1100,15 @@ input[type=number]::-webkit-outer-spin-button
 }
 
 .userend-dashboard-div .sidebar-menu{
-    flex-basis: 16%;
+    flex-basis: 17%;
 }
 
 .userend-dashboard-div .menu-content{
-    flex-basis: 84%;
+    flex-basis: 83%;
 }
 
 .userend-dashboard-div .side-bar .nav-link{
-    padding: 10px 10px;
+    padding: 12px 18px;
     border-left: 2px solid transparent;
     position: relative;
 }
@@ -1130,7 +1130,7 @@ input[type=number]::-webkit-outer-spin-button
 }
 
 .userend-dashboard-div .footer-div-list{
-    flex-basis: 84%;
+    flex-basis: 83%;
 }
 
 .down-arrow-dropdown{
@@ -1183,8 +1183,8 @@ input[type=number]::-webkit-outer-spin-button
 }
 
 .search-li input{
-    padding: 7px 10px;
-    padding-left: 25px;
+    padding: 10px 10px;
+    padding-left: 40px;
     background: #7badd3;
     color: #fff;
     border: none !important;
@@ -1195,12 +1195,13 @@ input[type=number]::-webkit-outer-spin-button
 .search-li input::placeholder{
     color: #fff !important;
     font-size: 12px;
+    font-weight: 800;
 }
 
 .search-icon-dropdown{
     position: absolute;
-    top: 10px;
-    left: 5px;
+    top: 14px;
+    left: 16px;
 }
 
 .search-icon-dropdown path{
@@ -1208,9 +1209,10 @@ input[type=number]::-webkit-outer-spin-button
 }
 
 .dropdown-listing{
-    padding: 10px 0px;
+    padding: 12px 0px;
     text-align: center;
     font-size: 12px;
+    font-weight: 800;
 }
 
 .dropdown-listing:hover{
@@ -1247,7 +1249,7 @@ input[type=number]::-webkit-outer-spin-button
 .request-access .dots-icon{
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 15px;
 }
 
 .request-access:hover{
